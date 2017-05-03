@@ -1,0 +1,2 @@
+module FoodCalcHelper
+end

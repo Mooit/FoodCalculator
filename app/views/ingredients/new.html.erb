@@ -1,0 +1,69 @@
+<h1>New Ingredient</h1>
+
+
+<%= form_for :ingredient, url: ingredients_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :'average_serving_size_(g)' %><br>
+    <%= f.number_field :avgSize %>
+  </p>
+
+  <p>
+    <%= f.label :calories %><br>
+    <%= f.number_field :calories %>
+  </p>
+
+  <p>
+    <%= f.label :'total_fat_(g)' %><br>
+    <%= f.number_field :toFat %>
+  </p>
+
+  <p>
+    <%= f.label :'cholesterol_(mg)' %><br>
+    <%= f.number_field :chol %>
+  </p>
+
+  <p>
+    <%= f.label :'sodium_(mg)' %><br>
+    <%= f.number_field :sod %>
+  </p>
+
+  <p>
+    <%= f.label :'potassium_(mg)' %><br>
+    <%= f.number_field :pot %>
+  </p>
+
+  <p>
+    <%= f.label :'total_carbohydrates_(g)' %><br>
+    <%= f.number_field :totalCarbs %>
+  </p>
+
+  <div class="subValues">
+  <p>
+    &emsp;
+    <%= f.label :'dietary_fiber_(g)' %><br>
+    &emsp;
+    <%= f.number_field :diFi %>
+  </p>
+
+  <p>
+    &emsp;
+    <%= f.label :'sugars_(g)' %><br>
+    &emsp;
+    <%= f.number_field :sugs %>
+  </p>
+  </div>
+
+  <p>
+    <%= f.label :'protein_(g)' %><br>
+    <%= f.number_field :pro %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

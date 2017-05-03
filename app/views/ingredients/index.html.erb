@@ -1,0 +1,34 @@
+<h1>Ingredient Database</h1>
+
+<table>
+  <tr>
+    <th>Name:</th>
+    <th>Average Serving Size (g)</th>
+    <th>Calories</th>
+    <th>Total fat (g)</th>
+    <th>Cholesterol (mg)</th>
+    <th>Sodium (mg)</th>
+    <th>Potassium (mg)</th>
+    <th>Total Carbohydrates (mg)</th>
+    <th>Dietary Fibre (g)</th>
+    <th>Sugars (g)</th>
+    <th>Protein (g)</th>
+  </tr>
+  
+  <% @ingredient.each do |ingredient| %>
+      <tr>
+        <td><%= @ingredient.name %></td>
+        <td><%= @ingredient.avgSize %></td>
+        <td><%= @ingredient.calories %></td>
+        <td><%= @ingredient.toFat %></td>
+        <td><%= @ingredient.chol %></td>
+        <td><%= @ingredient.sod %></td>
+        <td><%= @ingredient.pot %></td>
+        <td><%= @ingredient.totalCarbs %></td>
+        <td><%= @ingredient.diFi %></td>
+        <td><%= @ingredient.sugs %></td>
+        <td><%= @ingredient.pro %></td>
+      </tr>
+  <% end %>
+  
+</table>
