@@ -1,0 +1,82 @@
+<%= form_for @ingredient do |f| %>
+
+<% if @ingredient.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@ingredient.errors.count, "error") %> prohibited
+        this ingredient from being saved:
+      </h2>
+      <ul>
+        <% @ingredient.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :'average_serving_size_(g)' %><br>
+    <%= f.number_field :avgSize, step: :any %>
+  </p>
+
+  <p>
+    <%= f.label :calories %><br>
+    <%= f.number_field :calories, step: :any %>
+  </p>
+
+  <p>
+    <%= f.label :'total_fat_(g)' %><br>
+    <%= f.number_field :toFat, step: :any %>
+  </p>
+
+  <p>
+    <%= f.label :'cholesterol_(mg)' %><br>
+    <%= f.number_field :chol, step: :any %>
+  </p>
+
+  <p>
+    <%= f.label :'sodium_(mg)' %><br>
+    <%= f.number_field :sod, step: :any %>
+  </p>
+
+  <p>
+    <%= f.label :'potassium_(mg)' %><br>
+    <%= f.number_field :pot, step: :any %>
+  </p>
+
+  <p>
+    <%= f.label :'total_carbohydrates_(g)' %><br>
+    <%= f.number_field :totalCarbs, step: :any %>
+  </p>
+
+  <div class="subValues">
+  <p>
+    &emsp;
+    <%= f.label :'dietary_fiber_(g)' %><br>
+    &emsp;
+    <%= f.number_field :diFi, step: :any %>
+  </p>
+
+  <p>
+    &emsp;
+    <%= f.label :'sugars_(g)' %><br>
+    &emsp;
+    <%= f.number_field :sugs, step: :any %>
+  </p>
+  </div>
+
+  <p>
+    <%= f.label :'protein_(g)' %><br>
+    <%= f.number_field :pro, step: :any %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,1 +1,53 @@
-<h1>New Recipe</h1>
+<%= form_for @recipe do |f| %>
+
+<% if @recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@recipe.errors.count, "error") %> prohibited
+        this recipe from being saved:
+      </h2>
+      <ul>
+        <% @recipe.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <form method = "get"> 
+    <p>
+        <label for="ingredients">ingredients:</label>
+        <select name="ingredients" id="ingredients">
+          <% @ingredients.each do |ingredient| %>
+          
+          <option value="<%= ingredient.name %>"><%= ingredient.name %></option>
+          
+          <% end %>
+          
+                </select> <!--different breed options are made-->
+    </p>
+    <p>
+        <label for:"name">Name:</label>
+        <input type="text" name="name" id="name">
+    </p>
+     <p>
+        <label for:"age">Age:</label>
+        <input type="int" name="age" id="age">
+    </p>
+    <input type="submit" value="submit" onclick="addtoDB()"> <!--if the button is clicked then the addtoDB() function will be executed-->
+</form>
+  <p>
+    <%= f.label :servings %><br>
+    <%= f.number_field :servings %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

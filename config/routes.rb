@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   get 'food_calc/index'
   
+  resources :recipes do
+    resources :ingredients
+  end
+    
   resources :ingredients
-  
-  resources :recipes
+
+    
   
   root 'food_calc#index'
 

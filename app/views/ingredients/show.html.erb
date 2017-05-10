@@ -14,6 +14,7 @@
     <th>Dietary fibre (g)</th>
     <th>Sugars (g)</th>
     <th>Protein (g)</th>
+    <th></th>
   </tr>
   <tr>
     <td><%= @ingredient.name %></td>
@@ -27,5 +28,12 @@
     <td><%= @ingredient.diFi %></td>
     <td><%= @ingredient.sugs %></td>
     <td><%= @ingredient.pro %></td>
+    <td><%= link_to 'Edit', edit_ingredient_path(@ingredient) %></td>
   </tr>
 </table>
+
+<br/>
+<%= link_to 'Add Another Ingredient', new_ingredient_path %>
+<br/>
+<br/>
+<%= link_to 'View Ingredient Database', ingredients_path %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ingredients: 
+  name: MyString
+  avgSize: 1.5
+  calories: 1.5
+  toFat: 1.5
+  chol: 1.5
+  sod: 1.5
+  pot: 1.5
+  totalCarbs: 1.5
+  diFi: 1.5
+  sugs: 1.5
+  pro: 1.5
+
+two:
+  ingredients: 
+  name: MyString
+  avgSize: 1.5
+  calories: 1.5
+  toFat: 1.5
+  chol: 1.5
+  sod: 1.5
+  pot: 1.5
+  totalCarbs: 1.5
+  diFi: 1.5
+  sugs: 1.5
+  pro: 1.5

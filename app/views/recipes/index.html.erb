@@ -1,0 +1,47 @@
+<head>
+<title>Recipe Database</title>
+</head>
+
+<h1>Recipe Database</h1>
+
+<%= link_to 'Click here to create a recipe', new_recipe_path %>
+<br/>
+<br/>
+<%= link_to 'Back', controller: 'food_calc' %>
+<br/>
+<br/>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Servings</th>
+    <th>Calories</th>
+    <th>Total fat (g)</th>
+    <th>Cholesterol (mg)</th>
+    <th>Sodium (mg)</th>
+    <th>Potassium (mg)</th>
+    <th>Total Carbohydrates (mg)</th>
+    <th>Dietary Fibre (g)</th>
+    <th>Sugars (g)</th>
+    <th>Protein (g)</th>
+    <th colspan="4"></th>
+  </tr>
+  
+  <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.servings %></td>
+        <td><%= recipe.calories %></td>
+        <td><%= recipe.toFat %></td>
+        <td><%= recipe.chol %></td>
+        <td><%= recipe.sod %></td>
+        <td><%= recipe.pot %></td>
+        <td><%= recipe.totalCarbs %></td>
+        <td><%= recipe.diFi %></td>
+        <td><%= recipe.sugs %></td>
+        <td><%= recipe.pro %></td>
+        <td><%= link_to 'Show', recipe_path(recipe) %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Delete', recipe_path(recipe), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+    </tr>
+  <% end %>
